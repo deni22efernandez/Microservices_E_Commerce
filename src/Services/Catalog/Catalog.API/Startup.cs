@@ -1,4 +1,6 @@
 using Catalog.Persistence.Database;
+using Catalog.Service.Queries;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -10,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace Catalog.API
@@ -31,7 +34,9 @@ namespace Catalog.API
 				x=>x.MigrationsHistoryTable("__EFMigrationsHistory","Catalog"));
 				
 			});
+			services.AddTransient<IProductQuerieService, ProductQuerieService>();
 			services.AddControllers();
+			services.AddMediatR(Assembly.Load("Catalog.Services.EventHandlers"));
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,0 +1,29 @@
+﻿using MediatR;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Catalog.Services.EventHandlers.Commands
+{
+	public class ProductUpdateCommand:INotification
+	{
+		public ProductUpdateCommand()
+		{
+			this.Items = new List<ProductUpdateItem>();
+		}
+		public IEnumerable<ProductUpdateItem> Items { get; set; }
+	}
+	public class ProductUpdateItem
+	{
+		public int Id { get; set; }
+		public string Name { get; set; }
+		public string Description { get; set; }
+		public double Price { get; set; }
+		public int Stock { get; set; }
+		public Action Action { get; set; }
+	}
+	public enum Action
+	{
+		Substract, Add
+	}
+}

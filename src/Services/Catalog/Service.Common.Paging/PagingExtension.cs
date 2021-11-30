@@ -19,8 +19,8 @@ namespace Service.Common.Paging
 			}
 			var result = new DataCollection<T>
 			{
-				Items = await query.Skip(page).Take(page).ToListAsync(),
-				TotalItems = query.Count(),
+				Items = await query.Skip(page).Take(take).ToListAsync(),
+				TotalItems = await query.CountAsync(),
 				Page = originalPages
 
 			};

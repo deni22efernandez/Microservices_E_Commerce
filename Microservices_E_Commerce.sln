@@ -41,6 +41,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service.Common.Collection",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service.Common.Paging", "src\Services\Catalog\Service.Common.Paging\Service.Common.Paging.csproj", "{6C7C43D5-3AB2-437B-90B4-818631349316}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.Services.EventHandlers", "src\Services\Catalog\Catalog.Services.EventHandlers\Catalog.Services.EventHandlers.csproj", "{70D11A93-4BBD-488B-9CF9-1B8337DD092B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{1CB6F9E0-4B05-4FDC-B371-8CFF0347FC7F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +79,10 @@ Global
 		{6C7C43D5-3AB2-437B-90B4-818631349316}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C7C43D5-3AB2-437B-90B4-818631349316}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C7C43D5-3AB2-437B-90B4-818631349316}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70D11A93-4BBD-488B-9CF9-1B8337DD092B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70D11A93-4BBD-488B-9CF9-1B8337DD092B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70D11A93-4BBD-488B-9CF9-1B8337DD092B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70D11A93-4BBD-488B-9CF9-1B8337DD092B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -96,6 +104,8 @@ Global
 		{A9D45616-AE54-4E72-84D6-F9DA7AB96F21} = {0D1B3DD9-4DA6-4CAD-B308-2A5FD2691E40}
 		{6332844B-4C79-4A54-B53F-8A26D764D9C3} = {0D1B3DD9-4DA6-4CAD-B308-2A5FD2691E40}
 		{6C7C43D5-3AB2-437B-90B4-818631349316} = {0D1B3DD9-4DA6-4CAD-B308-2A5FD2691E40}
+		{70D11A93-4BBD-488B-9CF9-1B8337DD092B} = {CB572A0F-2AE2-4B4C-91D0-E3305AB4F129}
+		{1CB6F9E0-4B05-4FDC-B371-8CFF0347FC7F} = {FBAF75AF-D5FE-42E0-AF50-6FE404E16B8C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C87667D5-B7A5-49AC-938F-7813683D1DA2}
