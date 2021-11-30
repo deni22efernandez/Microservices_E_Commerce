@@ -1,4 +1,5 @@
 using Customer.Persistence.Database;
+using Customer.Service.Queries;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -30,6 +31,7 @@ namespace Customer.API
 				opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
 				x=>x.MigrationsHistoryTable("__EFMigrationsHistory", "Customer"));
 			});
+			services.AddTransient<ICustomerQuerieService, CustomerQuerieService>();
 			services.AddControllers();
 		}
 

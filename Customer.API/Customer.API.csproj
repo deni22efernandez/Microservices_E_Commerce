@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\src\Services\Customer\Customer.Persistence.Database\Customer.Persistence.Database.csproj" />
+    <ProjectReference Include="..\src\Services\Customer\Customer.Service.Queries\Customer.Service.Queries.csproj" />
   </ItemGroup>
 
 
