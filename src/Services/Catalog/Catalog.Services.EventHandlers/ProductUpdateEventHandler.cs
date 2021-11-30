@@ -2,6 +2,7 @@
 using Catalog.Services.EventHandlers.Commands;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,12 +15,15 @@ namespace Catalog.Services.EventHandlers
 	public class ProductUpdateEventHandler : INotificationHandler<ProductUpdateCommand>
 	{
 		private readonly ApplicationDbContext _db;
-		public ProductUpdateEventHandler(ApplicationDbContext db)
+		private ILogger<ProductUpdateEventHandler> _logger;
+		public ProductUpdateEventHandler(ApplicationDbContext db, ILogger<ProductUpdateEventHandler> logger)
 		{
 			_db = db;
+			_logger = logger;
 		}
 		public async Task Handle(ProductUpdateCommand command, CancellationToken cancellationToken)
 		{
+			_logger.LogInformation("Start...");
 			//var products = command.Items.Select(x => x.Id);
 			//var stocks = _db.Products.Where(x => products.Contains(x.Id)).ToList();
 			foreach (var item in command.Items)
@@ -30,6 +34,7 @@ namespace Catalog.Services.EventHandlers
 				{
 					if (entry == null || entry.Stock < item.Stock)
 					{
+						_logger.LogError("not enough stock...");
 						throw new Exception("item doesnt have enough stock");
 					}
 					entry.Description = item.Description;
@@ -59,6 +64,7 @@ namespace Catalog.Services.EventHandlers
 				}				
 
 			}
+			_logger.LogInformation("end...");
 			await _db.SaveChangesAsync();
 
 		}
