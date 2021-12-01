@@ -5,6 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.0.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -13,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\src\Services\Customer\Customer.Persistence.Database\Customer.Persistence.Database.csproj" />
+    <ProjectReference Include="..\src\Services\Customer\Customer.Service.EventHandlers\Customer.Service.EventHandlers.csproj" />
     <ProjectReference Include="..\src\Services\Customer\Customer.Service.Queries\Customer.Service.Queries.csproj" />
   </ItemGroup>
 

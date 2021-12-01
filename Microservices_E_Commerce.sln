@@ -45,7 +45,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Services.EventHandl
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06.Testing", "06.Testing", "{A14CAE10-CBB0-4CFE-B60D-A3ACEDE036BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.Tests", "src\Services\Catalog\Catalog.Tests\Catalog.Tests.csproj", "{B8EE8BCC-CEB6-4EED-A559-A2E7DECD9235}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Tests", "src\Services\Catalog\Catalog.Tests\Catalog.Tests.csproj", "{B8EE8BCC-CEB6-4EED-A559-A2E7DECD9235}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.API", "01.API", "{145BA788-DEC8-4188-88FA-1674A67D1822}"
 EndProject
@@ -55,13 +55,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03.Services", "03.Services"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04.Models", "04.Models", "{AB179D02-C078-4836-84CC-11E8FF2241DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customer.Domain", "src\Services\Customer\Customer.Domain\Customer.Domain.csproj", "{6E3DC862-54DF-4DEC-A6C7-DDB79FCF3395}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Customer.Domain", "src\Services\Customer\Customer.Domain\Customer.Domain.csproj", "{6E3DC862-54DF-4DEC-A6C7-DDB79FCF3395}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customer.API", "Customer.API\Customer.API.csproj", "{781ADDEB-7BD2-4597-A58F-AFF2E757A558}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Customer.API", "Customer.API\Customer.API.csproj", "{781ADDEB-7BD2-4597-A58F-AFF2E757A558}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customer.Persistence.Database", "src\Services\Customer\Customer.Persistence.Database\Customer.Persistence.Database.csproj", "{0CFF2AAC-421B-48F8-892B-8B016E05CBE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Customer.Persistence.Database", "src\Services\Customer\Customer.Persistence.Database\Customer.Persistence.Database.csproj", "{0CFF2AAC-421B-48F8-892B-8B016E05CBE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customer.Service.Queries", "src\Services\Customer\Customer.Service.Queries\Customer.Service.Queries.csproj", "{63CC30F2-0267-4686-A7DC-7307AF49CFDD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Customer.Service.Queries", "src\Services\Customer\Customer.Service.Queries\Customer.Service.Queries.csproj", "{63CC30F2-0267-4686-A7DC-7307AF49CFDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customer.Service.EventHandlers", "src\Services\Customer\Customer.Service.EventHandlers\Customer.Service.EventHandlers.csproj", "{A5EA40F3-3408-41F3-AE1B-24474371CA05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -121,6 +123,10 @@ Global
 		{63CC30F2-0267-4686-A7DC-7307AF49CFDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63CC30F2-0267-4686-A7DC-7307AF49CFDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63CC30F2-0267-4686-A7DC-7307AF49CFDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5EA40F3-3408-41F3-AE1B-24474371CA05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5EA40F3-3408-41F3-AE1B-24474371CA05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5EA40F3-3408-41F3-AE1B-24474371CA05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5EA40F3-3408-41F3-AE1B-24474371CA05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -153,6 +159,7 @@ Global
 		{781ADDEB-7BD2-4597-A58F-AFF2E757A558} = {145BA788-DEC8-4188-88FA-1674A67D1822}
 		{0CFF2AAC-421B-48F8-892B-8B016E05CBE7} = {39439EF0-6736-4AAF-A003-8984779AAA72}
 		{63CC30F2-0267-4686-A7DC-7307AF49CFDD} = {52769D32-0E9D-4AF8-8B8B-C476FBE730E7}
+		{A5EA40F3-3408-41F3-AE1B-24474371CA05} = {52769D32-0E9D-4AF8-8B8B-C476FBE730E7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C87667D5-B7A5-49AC-938F-7813683D1DA2}

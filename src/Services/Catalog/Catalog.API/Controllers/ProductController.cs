@@ -24,7 +24,7 @@ namespace Catalog.API.Controllers
 			_mediator = mediator;
 		}
 		[HttpGet]
-		public async Task<DataCollection<ProductDto>> GetAllAsync(int page=2, int take=3, string ids = null)
+		public async Task<DataCollection<ProductDto>> GetAllAsync(int page=1, int take=3, string ids = null)
 		{
 			IEnumerable<int> prodId = null;
 			if (!string.IsNullOrEmpty(ids))
